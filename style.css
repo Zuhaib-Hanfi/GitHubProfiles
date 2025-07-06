@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #111; /* Deep black background */
+    background-color: #111; /* Deep black */
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     color: #f5f5f5;
     padding: 30px;
@@ -26,33 +26,88 @@ body {
 h1 {
     font-size: 2.8rem;
     font-weight: 700;
-    color: #ffd700; /* Golden */
+    color: #ffd700; /* Gold */
     letter-spacing: 1px;
 }
 
 /* Profile Container */
+/* Profile Container (now only wraps input + cardsContainer) */
 #profile {
     background-color: #1e1e1e;
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
     box-shadow: 0 10px 25px rgba(255, 215, 0, 0.05);
     border: 1px solid rgba(255, 215, 0, 0.1);
 }
 
+/* Cards Grid */
+#cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Input Section */
+#inputContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#inputContainer input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 200px;
+}
+
+#inputContainer input:focus {
+    border-color: #fff;
+}
+
+#inputContainer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffd700;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#inputContainer button:hover {
+    background-color: #e6c200;
+}
+
 /* Cards Container */
+#cardsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+
+/* Cards */
 .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     background-color: #222;
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.12);
     transition: all 0.3s ease;
@@ -66,7 +121,6 @@ h1 {
     box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
 }
 
-/* Card Image */
 .cards > img {
     height: 220px;
     width: 220px;
@@ -80,14 +134,12 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Card Title */
 .cards > h2 {
     font-size: 1.6rem;
     font-weight: 600;
     color: #ffcc00;
 }
 
-/* Card Link */
 .cards > a {
     font-size: 1rem;
     color: #ffd700;
